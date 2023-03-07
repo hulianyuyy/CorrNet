@@ -87,7 +87,7 @@ You can choose any one of following datasets to verify the effectiveness of Corr
 
 | Backbone | Dev WER  | Test WER  | Pretrained model                                             |
 | -------- | ---------- | ----------- | --- |
-| ResNet18 | 18.8%      | 19.4%       | [[Baidu]](https://pan.baidu.com/s/1Y5q40n8dRxYWLcuf_lrFDA) (passwd: 47w5)<br />[[Google Drive]](https://drive.google.com/file/d/1npyJuhwn-NrYGQrjoBxCFqPeQRYq3Gmb/view?usp=share_link) |
+| ResNet18 | 18.8%      | 19.4%       | [[Baidu]](https://pan.baidu.com/s/1DIGts18fdh4Fdw_y7ZQ6XA) (passwd: skd3)<br />[[Google Drive]]() |
 
 We wrongly delete the original checkpoint and retrain the model with similar accuracy (Dev: 18.9%, Test: 19.7%)
 
@@ -95,18 +95,18 @@ We wrongly delete the original checkpoint and retrain the model with similar acc
 
 | Backbone | Dev WER  | Test WER  | Pretrained model                                             |
 | -------- | ---------- | ----------- | --- |
-| ResNet18 | 18.9%      | 20.5%       | [[Baidu]](https://pan.baidu.com/s/1n-F8al1D1Q6CIpJe7WeT5A) (passwd: evtm)<br />[[Google Drive]](https://drive.google.com/file/d/1dCKz9pevWhgxM78yfILxi_JcliCg5XNH/view?usp=share_link) |
+| ResNet18 | 18.9%      | 20.5%       | [[Baidu]](https://pan.baidu.com/s/1osUDzpPhKPDavxyvqOrVfQ) (passwd: deuq)<br />[[Google Drive]]() |
 
 ### CSL-Daily dataset
 
-To evaluate upon CSL-Daily with this checkpoint, you should remove the CorrNet block after layer2, i.e., comment line 102 and 145 in resnet.py.
+To evaluate upon CSL-Daily with this checkpoint, you should remove the CorrNet block after layer2, i.e., comment line 102 and 145 in resnet.py and change the num from 3 to 2 in line 105, change self.alpha[1] & self.alpha[2] to self.alpha[0] & self.alpha[1] in line 147 & 149, respectively.
 
 | Backbone | Dev WER  | Test WER  | Pretrained model                                            |
 | -------- | ---------- | ----------- | --- |
-| ResNet18 | 30.6%      | 30.1%       | [[Baidu]](https://pan.baidu.com/s/1y8hJxECqmCkoBx23BruFKA) (passwd: igz7)<br />[[Google Drive]](https://drive.google.com/file/d/1KCs0B0xMoZCnS5jhV7crH882AtdfTZgD/view?usp=share_link) |
+| ResNet18 | 30.6%      | 30.1%       | [[Baidu]](https://pan.baidu.com/s/1WzNltivGRbfV33wkM4rzjg) (passwd: u2iv)<br />[[Google Drive]]() |
 
 
-​	To evaluate the pretrained model, run the command below：   
+​	To evaluate the pretrained model, choose the dataset from phoenix2014/phoenix2014-T/CSL/CSL-Daily in line 3 in ./config/baseline.yaml first, and run the command below：   
 `python main.py --device your_device --load-weights path_to_weight.pt --phase test`
 
 ### Training
