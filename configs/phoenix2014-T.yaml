@@ -1,0 +1,4 @@
+dataset_root: ./dataset/phoenix2014-T
+dict_path: ./preprocess/phoenix2014-T/gloss_dict.npy
+evaluation_dir: ./evaluation/slr_eval
+evaluation_prefix: phoenix2014-T-groundtruth
