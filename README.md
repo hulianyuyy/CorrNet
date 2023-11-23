@@ -5,15 +5,15 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 
 ## Prerequisites
 
-- This project is implemented in Pytorch (>1.8). Thus please install Pytorch first.
+- This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
 
 - ctcdecode==0.4 [[parlance/ctcdecode]](https://github.com/parlance/ctcdecode)，for beam search decode.
 
-- sclite [[kaldi-asr/kaldi]](https://github.com/kaldi-asr/kaldi), install kaldi tool to get sclite for evaluation. After installation, create a soft link toward the sclite: 
+- [Optional] sclite [[kaldi-asr/kaldi]](https://github.com/kaldi-asr/kaldi), install kaldi tool to get sclite for evaluation. After installation, create a soft link toward the sclite: 
   `mkdir ./software`
   `ln -s PATH_TO_KALDI/tools/sctk-2.4.10/bin/sclite ./software/sclite`
 
-- [SeanNaren/warp-ctc](https://github.com/SeanNaren/warp-ctc) for ctc supervision.
+   You may use the python version evaluation tool for convenience (by setting 'evaluate_tool' as 'python' in line 16 of ./configs/baseline.yaml), but sclite can provide more detailed statistics.
 
 - You can install other required modules by conducting 
    `pip install -r requirements.txt`
