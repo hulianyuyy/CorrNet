@@ -8,7 +8,7 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
 
-- ctcdecode==0.4 [[parlance/ctcdecode]](https://github.com/parlance/ctcdecode)，for beam search decode.
+- ctcdecode==0.4 [[parlance/ctcdecode]](https://github.com/parlance/ctcdecode)，for beam search decode. (ctcdecode is only supported on the Linux platform.)
 
 - [Optional] sclite [[kaldi-asr/kaldi]](https://github.com/kaldi-asr/kaldi), install kaldi tool to get sclite for evaluation. After installation, create a soft link toward the sclite: 
   `mkdir ./software`
@@ -54,6 +54,8 @@ You can choose any one of following datasets to verify the effectiveness of Corr
    cd ./preprocess
    python data_preprocess-T.py --process-image --multiprocessing
    ```
+
+If you get an error like ```IndexError: list index out of range``` on the PHOENIX2014-T dataset, you may refer to [this issue](https://github.com/hulianyuyy/CorrNet/issues/10#issuecomment-1660363025) to tackle the problem.
 
 ### CSL dataset
 
@@ -109,13 +111,13 @@ To evaluate upon CSL-Daily with this checkpoint, you should remove the CorrNet b
 
 
 ​	To evaluate the pretrained model, choose the dataset from phoenix2014/phoenix2014-T/CSL/CSL-Daily in line 3 in ./config/baseline.yaml first, and run the command below：   
-`python main.py --device your_device --load-weights path_to_weight.pt --phase test`
+`python main.py --config ./config/baseline.yaml --device your_device --load-weights path_to_weight.pt --phase test`
 
 ### Training
 
 The priorities of configuration files are: command line > config file > default values of argparse. To train the SLR model, run the command below:
 
-`python main.py --device your_device`
+`python main.py --config ./config/baseline.yaml --device your_device`
 
 Note that you can choose the target dataset from phoenix2014/phoenix2014-T/CSL/CSL-Daily in line 3 in ./config/baseline.yaml.
  

@@ -9,10 +9,10 @@ import torch
 from collections import OrderedDict
 import utils
 gpu_id = 0 # which gpu to use
-dataset = 'phoenix2014'
-prefix = './dataset/phoenix2014/phoenix-2014-multisigner'
+dataset = 'phoenix2014' # support [phoenix2014, phoenix2014-T, CSL-Daily]
+prefix = './dataset/phoenix2014/phoenix-2014-multisigner' # ['./dataset/CSL-Daily', './dataset/phoenix2014-T', './dataset/phoenix2014/phoenix-2014-multisigner']
 dict_path = f'./preprocess/{dataset}/gloss_dict.npy'
-model_weights = 'path_to_model_weights'
+model_weights = 'path_to_model_weights'  #TODO: replace with your path
 select_id = 0 # The video selected to show. 539 for 31October_2009_Saturday_tagesschau_default-8, 0 for 01April_2010_Thursday_heute_default-1, 1 for 01August_2011_Monday_heute_default-6, 2 for 01December_2011_Thursday_heute_default-3
 
 # Load data and apply transformation
@@ -20,7 +20,7 @@ gloss_dict = np.load(dict_path, allow_pickle=True).item()
 inputs_list = np.load(f"./preprocess/{dataset}/dev_info.npy", allow_pickle=True).item()
 name = inputs_list[select_id]['fileid']
 print(f'Generating CAM for {name}')
-img_folder = os.path.join(prefix, "features/fullFrame-256x256px/" + inputs_list[select_id]['folder']) if 'phoenix' in dataset else os.path.join(prefix, "features/fullFrame-256x256px/" + inputs_list[select_id]['folder'] + "/*.jpg")
+img_folder = os.path.join(prefix, "features/fullFrame-256x256px/" + inputs_list[select_id]['folder']) if 'phoenix' in dataset else os.path.join(prefix, inputs_list[select_id]['folder'])
 img_list = sorted(glob.glob(img_folder))
 img_list = [cv2.cvtColor(cv2.imread(img_path), cv2.COLOR_BGR2RGB) for img_path in img_list]
 label_list = []
@@ -68,7 +68,7 @@ fmap_block = list()
 device = utils.GpuDataParallel()
 device.set_device(gpu_id)
 # Define model and load state-dict
-model = SLRModel( num_classes=1296, c2d_type='resnet18', conv_type=2, use_bn=1, gloss_dict=gloss_dict,
+model = SLRModel( num_classes=len(gloss_dict)+1, c2d_type='resnet18', conv_type=2, use_bn=1, gloss_dict=gloss_dict,
             loss_weights={'ConvCTC': 1.0, 'SeqCTC': 1.0, 'Dist': 25.0},   )
 state_dict = torch.load(model_weights)['model_state_dict']
 state_dict = OrderedDict([(k.replace('.module', ''), v) for k, v in state_dict.items()])
@@ -80,7 +80,10 @@ model.train()
 
 def forward_hook(module, input, output):
     fmap_block.append(output)       #N, C, T, H, ,W 
-model.conv2d.corr2.conv_back.register_forward_hook(forward_hook)	
+if 'phoenix' in dataset:
+    model.conv2d.corr2.conv_back.register_forward_hook(forward_hook)	
+else:
+    model.conv2d.corr3.conv_back.register_forward_hook(forward_hook)  # For CSL-Daily
 
 def cam_show_img(img, feature_map, grads, out_dir):  # img: ntchw, feature_map: ncthw, grads: ncthw
     N, C, T, H, W = feature_map.shape
