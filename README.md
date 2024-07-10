@@ -39,7 +39,7 @@ You can choose any one of following datasets to verify the effectiveness of Corr
 
    ```bash
    cd ./preprocess
-   python data_preprocess.py --process-image --multiprocessing
+   python dataset_preprocess.py --process-image --multiprocessing
    ```
 
 ### PHOENIX2014-T dataset
@@ -52,7 +52,7 @@ You can choose any one of following datasets to verify the effectiveness of Corr
 
    ```bash
    cd ./preprocess
-   python data_preprocess-T.py --process-image --multiprocessing
+   python dataset_preprocess-T.py --process-image --multiprocessing
    ```
 
 If you get an error like ```IndexError: list index out of range``` on the PHOENIX2014-T dataset, you may refer to [this issue](https://github.com/hulianyuyy/CorrNet/issues/10#issuecomment-1660363025) to tackle the problem.
@@ -68,7 +68,7 @@ If you get an error like ```IndexError: list index out of range``` on the PHOENI
 
    ```bash
    cd ./preprocess
-   python data_preprocess-CSL.py --process-image --multiprocessing
+   python dataset_preprocess-CSL.py --process-image --multiprocessing
    ``` 
 
 ### CSL-Daily dataset
@@ -82,7 +82,7 @@ If you get an error like ```IndexError: list index out of range``` on the PHOENI
 
    ```bash
    cd ./preprocess
-   python data_preprocess-CSL-Daily.py --process-image --multiprocessing
+   python dataset_preprocess-CSL-Daily.py --process-image --multiprocessing
    ``` 
 
 ## Inference
