@@ -32,7 +32,7 @@ width=800>
 
 <div align=center>
 
-[![Explaining Video](https://img.youtube.com/vi/V0I6ntvb9pQ/0.jpg)](https://www.youtube.com/watch?v=V0I6ntvb9pQ)
+[![Explaining Video](https://img.youtube.com/vi/V0I6ntvb9pQ/0.jpg)](https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4)
 
 Tutorial video on youtube. 
 
