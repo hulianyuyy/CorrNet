@@ -39,8 +39,6 @@ Soroush Mehraban](https://www.youtube.com/@soroushmehraban)!
     
 https://github.com/pkunlp-icler/FastV/assets/43977888/e6ae44b9-ebb9-4b69-b534-cee3441b1d22
 
-
-<img width="600" src="./figs/fastv_tradeoff.png"/>
 </div>
 
 ## Prerequisites
