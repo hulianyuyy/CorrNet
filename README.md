@@ -30,13 +30,11 @@ height=600
 width=800> 
 </iframe> -->
 
-<!-- <div align=center>
+ <div align=center>
 
-[![Explaining Video](https://img.youtube.com/vi/V0I6ntvb9pQ/0.jpg)](https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4)
+https://github.com/hulianyuyy/CorrNet/releases/download/demo/demo.mp4
 
-Tutorial video on youtube. 
-
-</div> -->
+</div>
 
 ## Prerequisites
 
