@@ -15,10 +15,20 @@ Demo video on performing cintonuous sign language recognition.
 
 <!-- <video src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" controls></video> -->
 
-<video id="video" controls="" preload="none" poster="https://github.com/hulianyuyy/CorrNet/blob/main/demo.jpg">
+<!-- <video id="video" controls="" preload="none" poster="https://github.com/hulianyuyy/CorrNet/blob/main/demo.jpg">
       <source id="mp4" src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" type="video/mp4">
-</video>
+</video> -->
 
+<iframe 
+src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+allowfullscreen="true" 
+height=600 
+width=800> 
+</iframe>
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
