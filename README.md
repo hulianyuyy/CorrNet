@@ -9,7 +9,9 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 
 ![Demo video](https://github.com/hulianyuyy/CorrNet/blob/main/demo.gif)
 
-
+<div align=center>
+The demo video
+</div>
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
