@@ -17,7 +17,7 @@ Demo video on performing cintonuous sign language recognition.
 
 <video id="video" controls="" preload="none" poster="https://github.com/hulianyuyy/CorrNet/blob/main/demo.jpg">
       <source id="mp4" src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" type="video/mp4">
-</videos>
+</video>
 
 ## Prerequisites
 
