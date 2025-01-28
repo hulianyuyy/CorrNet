@@ -19,7 +19,7 @@ Demo video on performing cintonuous sign language recognition.
       <source id="mp4" src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" type="video/mp4">
 </video> -->
 
-<iframe 
+<!-- <iframe 
 src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" 
 scrolling="no" 
 border="0" 
@@ -28,7 +28,20 @@ framespacing="0"
 allowfullscreen="true" 
 height=600 
 width=800> 
-</iframe>
+</iframe> -->
+
+<div align=center>
+
+Tutorial video on youtube. Thanks to [
+Soroush Mehraban](https://www.youtube.com/@soroushmehraban)!
+
+[![Explaining Video](https://img.youtube.com/vi/V0I6ntvb9pQ/0.jpg)](https://www.youtube.com/watch?v=V0I6ntvb9pQ)
+    
+https://github.com/pkunlp-icler/FastV/assets/43977888/e6ae44b9-ebb9-4b69-b534-cee3441b1d22
+
+
+<img width="600" src="./figs/fastv_tradeoff.png"/>
+</div>
 
 ## Prerequisites
 
