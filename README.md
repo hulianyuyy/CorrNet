@@ -7,34 +7,8 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 
 (Update on 2025/01/28) We release a demo for Continuous sign language recognition that supports multi-images and video inputs! You can watch the demo video to watch its effects, or deploy a demo locally to test its performance. 
 
-<!-- <div align=center>
-[![Demo Video](https://github.com/hulianyuyy/CorrNet/blob/main/demo.jpg)](https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4)
+![Demo video](.demo.gif)
 
-Demo video on performing cintonuous sign language recognition. 
-</div>  -->
-
-<!-- <video src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" controls></video> -->
-
-<!-- <video id="video" controls="" preload="none" poster="https://github.com/hulianyuyy/CorrNet/blob/main/demo.jpg">
-      <source id="mp4" src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" type="video/mp4">
-</video> -->
-
-<!-- <iframe 
-src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" 
-scrolling="no" 
-border="0" 
-frameborder="no" 
-framespacing="0" 
-allowfullscreen="true" 
-height=600 
-width=800> 
-</iframe> -->
-
- <div align=center>
-
-https://github.com/hulianyuyy/CorrNet/releases/download/demo/demo.mp4
-
-</div>
 
 ## Prerequisites
 
