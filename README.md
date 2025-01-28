@@ -4,6 +4,13 @@ This repo holds codes of the paper: Continuous Sign Language Recognition with Co
 This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/ICCV2021/html/Min_Visual_Alignment_Constraint_for_Continuous_Sign_Language_Recognition_ICCV_2021_paper.html). Many thanks for their great work!
 
 (Update on 2024/04/17) We release [**CorrNet+**](https://github.com/hulianyuyy/CorrNet_Plus), an unified model with superior performance on both **continuous sign language recognition** and **sign language translation** tasks by using **only RGB inputs**.
+
+(Update on 2025/01/28) We release a demo for Continuous sign language recognition that supports multi-images and video inputs! You can watch the demo video to watch its effects, or deploy a demo locally to test its performance. 
+
+<video width="320" height="240" controls>
+<source src="demo.mp4" type="video/mp4">
+</video>
+
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
@@ -125,6 +132,37 @@ For CSL-Daily dataset, You may choose to reduce the lr by half from 0.0001 to 0.
 
 ### Visualizations
 For Grad-CAM visualization, you can replace the resnet.py under "./modules" with the resnet.py under "./weight_map_generation", and then run ```python generate_cam.py``` with your own hyperparameters.
+
+### Test with one video input
+Except performing inference on datasets, we provide a `test_one_video.py` to perform inference with only one video input. An example command is 
+```
+python test_one_video.py --model_path /path_to_pretrained_weights --video_path /path_to_your_video --device your_device
+```
+The `video_path` can be the path to a video file or a dir contains extracted images from a video.
+
+Acceptable paramters:
+- `model_path`, the path to pretrained weights.
+- `video_path`, the path to a video file or a dir contains extracted images from a video.
+- `device`, which device to run inference, default=0.
+- `language`, the target sign language, default='phoenix', choices=['phoenix', 'csl'].
+- `max_frames_num`, the max input frames sampled from an input video, default=360.
+
+### Demo
+We provide a demo to allow deploying continuous sign language recognition models locally to test its effects. The demo page is shown as follows.
+<div align=center>
+<img width="800" src="./demo.jpg"/>
+<h4> The page of our demo</h4>
+</div>
+The demo video can be found in the top of this page. An example command is 
+```
+python demo.py --model_path /path_to_pretrained_weights --device your_device
+```
+
+Acceptable paramters:
+- `model_path`, the path to pretrained weights.
+- `device`, which device to run inference, default=0.
+- `language`, the target sign language, default='phoenix', choices=['phoenix', 'csl'].
+- `max_frames_num`, the max input frames sampled from an input video, default=360.
 
 ### Citation
 
