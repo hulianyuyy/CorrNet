@@ -10,7 +10,7 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 <video width="320" height="240" controls>
 <source src="./demo.mp4" type="video/mp4">
 </video>
-<\div>
+</div>
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
