@@ -13,7 +13,7 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 Demo video on performing cintonuous sign language recognition. 
 </div> -->
 
-<video src="https://github.com/hulianyuyy/CorrNet/demo.mp4" controls></video>
+<video src="https://github.com/hulianyuyy/CorrNet/blob/main/demo.mp4" controls></video>
 
 
 ## Prerequisites
