@@ -6,9 +6,16 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 (Update on 2024/04/17) We release [**CorrNet+**](https://github.com/hulianyuyy/CorrNet_Plus), an unified model with superior performance on both **continuous sign language recognition** and **sign language translation** tasks by using **only RGB inputs**.
 
 (Update on 2025/01/28) We release a demo for Continuous sign language recognition that supports multi-images and video inputs! You can watch the demo video to watch its effects, or deploy a demo locally to test its performance. 
-<div align=center>
-<video src="demo.mp4" autoplay="true" controls="controls" width="800" height="600"></video>
-</div>
+<iframe 
+src=".demo.mp4" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+allowfullscreen="true" 
+height=600 
+width=800> 
+</iframe>
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
