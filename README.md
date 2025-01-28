@@ -7,9 +7,7 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 
 (Update on 2025/01/28) We release a demo for Continuous sign language recognition that supports multi-images and video inputs! You can watch the demo video to watch its effects, or deploy a demo locally to test its performance. 
 <div align=center>
-<video width="320" height="240" controls>
-<source src="./demo.mp4" type="video/mp4">
-</video>
+<video src="demo.mp4" autoplay="true" controls="controls" width="800" height="600"></video>
 </div>
 ## Prerequisites
 
