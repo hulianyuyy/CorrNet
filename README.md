@@ -8,7 +8,7 @@ This repo is based on [VAC (ICCV 2021)](https://openaccess.thecvf.com/content/IC
 (Update on 2025/01/28) We release a demo for Continuous sign language recognition that supports multi-images and video inputs! You can watch the demo video to watch its effects, or deploy a demo locally to test its performance. 
 
 <video width="320" height="240" controls>
-<source src="demo.mp4" type="video/mp4">
+<source src="./demo.mp4" type="video/mp4">
 </video>
 
 ## Prerequisites
@@ -164,6 +164,7 @@ Acceptable paramters:
 - `language`, the target sign language, default='phoenix', choices=['phoenix', 'csl'].
 - `max_frames_num`, the max input frames sampled from an input video, default=360.
 
+After running the command, you can visit `http://0.0.0.0:7862` to play with the demo. You can also change it into an public URL by setting `share=True` in line 176 in `demo.py`.
 ### Citation
 
 If you find this repo useful in your research works, please consider citing:
