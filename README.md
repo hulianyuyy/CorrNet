@@ -162,6 +162,7 @@ We provide a demo to allow deploying continuous sign language recognition models
 <h4> The page of our demo</h4>
 </div>
 The demo video can be found in the top of this page. An example command is 
+
 ```
 python demo.py --model_path /path_to_pretrained_weights --device your_device
 ```
