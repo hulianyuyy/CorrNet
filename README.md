@@ -17,7 +17,7 @@ https://github.com/user-attachments/assets/a7354510-e5e0-44af-b283-39707f625a9b
 
 <div align=center>
 The web demo video
-</div> -->
+</div>
 
 ## Prerequisites
 
