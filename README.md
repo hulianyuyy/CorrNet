@@ -143,9 +143,7 @@ For Grad-CAM visualization, you can replace the resnet.py under "./modules" with
 
 ### Test with one video input
 Except performing inference on datasets, we provide a `test_one_video.py` to perform inference with only one video input. An example command is 
-```
-python test_one_video.py --model_path /path_to_pretrained_weights --video_path /path_to_your_video --device your_device
-```
+`python test_one_video.py --model_path /path_to_pretrained_weights --video_path /path_to_your_video --device your_device`
 The `video_path` can be the path to a video file or a dir contains extracted images from a video.
 
 Acceptable paramters:
@@ -161,11 +159,7 @@ We provide a demo to allow deploying continuous sign language recognition models
 <img width="800" src="./demo.jpg"/>
 <h4> The page of our demo</h4>
 </div>
-The demo video can be found in the top of this page. An example command is 
-
-```
-python demo.py --model_path /path_to_pretrained_weights --device your_device
-```
+The demo video can be found in the top of this page. An example command is `python demo.py --model_path /path_to_pretrained_weights --device your_device`
 
 Acceptable paramters:
 - `model_path`, the path to pretrained weights.
