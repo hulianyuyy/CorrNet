@@ -15,6 +15,10 @@ The demo video
 
 https://github.com/user-attachments/assets/a7354510-e5e0-44af-b283-39707f625a9b
 
+<div align=center>
+The web demo video
+</div> -->
+
 ## Prerequisites
 
 - This project is implemented in Pytorch (better >=1.13 to be compatible with ctcdecode or these may exist errors). Thus please install Pytorch first.
