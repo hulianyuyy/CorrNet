@@ -150,7 +150,7 @@ Except performing inference on datasets, we provide a `test_one_video.py` to per
 
 The `video_path` can be the path to a video file or a dir contains extracted images from a video.
 
-Acceptable paramters:
+Acceptable parameters:
 - `model_path`, the path to pretrained weights.
 - `video_path`, the path to a video file or a dir contains extracted images from a video.
 - `device`, which device to run inference, default=0.
@@ -167,7 +167,7 @@ The demo video can be found in the top of this page. An example command is
 
 `python demo.py --model_path /path_to_pretrained_weights --device your_device`
 
-Acceptable paramters:
+Acceptable parameters:
 - `model_path`, the path to pretrained weights.
 - `device`, which device to run inference, default=0.
 - `language`, the target sign language, default='phoenix', choices=['phoenix', 'csl'].
